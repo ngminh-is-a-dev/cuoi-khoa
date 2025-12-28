@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-laptop"></i> TechZone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="input-group me-3 d-none d-md-flex" style="width: 250px;">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Tìm kiếm...">
+                        <button class="btn btn-light" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <a href="cart.html" class="btn btn-light position-relative me-2">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartBadge" class="badge bg-danger badge-cart">0</span>
+                    </a>
+                    <div id="userSection">
+                        <button class="btn btn-light" onclick="showLoginModal()">
+                            <i class="fas fa-user"></i> <span class="d-none d-md-inline">Đăng nhập</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero-banner text-center" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold mb-3">iPhone 15 Pro Max</h1>
+                        <p class="lead mb-4">Titanium. Mạnh mẽ. Nhẹ nhàng. Pro.</p>
+                        <a href="products.html" class="btn btn-light btn-lg">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-banner text-center" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold mb-3">MacBook Pro M3</h1>
+                        <p class="lead mb-4">Hiệu năng đỉnh cao cho chuyên gia</p>
+                        <a href="products.html" class="btn btn-light btn-lg">Khám phá ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-banner text-center" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold mb-3">Samsung Galaxy S24</h1>
+                        <p class="lead mb-4">AI Galaxy - Trải nghiệm thông minh mới</p>
+                        <a href="products.html" class="btn btn-light btn-lg">Đặt hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-3">
+                    <div class="feature-box">
+                        <i class="fas fa-shipping-fast feature-icon"></i>
+                        <h5>Miễn phí vận chuyển</h5>
+                        <p class="text-muted">Đơn hàng trên 5 triệu</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <div class="feature-box">
+                        <i class="fas fa-undo feature-icon"></i>
+                        <h5>Đổi trả 30 ngày</h5>
+                        <p class="text-muted">Hoàn tiền 100%</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <div class="feature-box">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                        <h5>Bảo hành chính hãng</h5>
+                        <p class="text-muted">Lên đến 24 tháng</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <div class="feature-box">
+                        <i class="fas fa-headset feature-icon"></i>
+                        <h5>Hỗ trợ 24/7</h5>
+                        <p class="text-muted">Hotline: 1900-xxxx</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Danh mục sản phẩm</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <a href="products.html?category=phone" class="text-decoration-none">
+                        <div class="card category-card shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400" class="card-img-top category-img" alt="Điện thoại">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Điện thoại</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="products.html?category=laptop" class="text-decoration-none">
+                        <div class="card category-card shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400" class="card-img-top category-img" alt="Laptop">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Laptop</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="products.html?category=tablet" class="text-decoration-none">
+                        <div class="card category-card shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?w=400" class="card-img-top category-img" alt="Tablet">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Tablet</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="products.html?category=accessory" class="text-decoration-none">
+                        <div class="card category-card shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" class="card-img-top category-img" alt="Phụ kiện">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Phụ kiện</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Sản phẩm nổi bật</h2>
+            <div id="featuredProducts" class="row g-4"></div>
+            <div class="text-center mt-4">
+                <a href="products.html" class="btn btn-primary btn-lg">Xem tất cả sản phẩm</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Tin tức công nghệ</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card news-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400" class="card-img-top news-img" alt="News">
+                        <div class="card-body">
+                            <small class="text-muted"><i class="far fa-calendar"></i> 20/12/2024</small>
+                            <h5 class="card-title mt-2">Apple công bố iPhone 16 với chip A18</h5>
+                            <p class="card-text">Dòng iPhone mới nhất của Apple mang đến hiệu năng vượt trội và camera AI...</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card news-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" class="card-img-top news-img" alt="News">
+                        <div class="card-body">
+                            <small class="text-muted"><i class="far fa-calendar"></i> 18/12/2024</small>
+                            <h5 class="card-title mt-2">Top 5 laptop gaming đáng mua năm 2024</h5>
+                            <p class="card-text">Tổng hợp những chiếc laptop gaming tốt nhất với hiệu năng mạnh mẽ...</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card news-card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=400" class="card-img-top news-img" alt="News">
+                        <div class="card-body">
+                            <small class="text-muted"><i class="far fa-calendar"></i> 15/12/2024</small>
+                            <h5 class="card-title mt-2">Samsung ra mắt Galaxy S24 Ultra</h5>
+                            <p class="card-text">Flagship mới nhất của Samsung với AI thế hệ mới và camera 200MP...</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3"><i class="fas fa-laptop"></i> TechZone</h5>
+                    <p>Cửa hàng công nghệ hàng đầu Việt Nam. Cung cấp các sản phẩm chính hãng với giá tốt nhất.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="mb-3">Về chúng tôi</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Giới thiệu</a></li>
+                        <li class="mb-2"><a href="#">Tuyển dụng</a></li>
+                        <li class="mb-2"><a href="#">Tin tức</a></li>
+                        <li class="mb-2"><a href="#">Chính sách</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="mb-3">Hỗ trợ</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Hướng dẫn</a></li>
+                        <li class="mb-2"><a href="#">Bảo hành</a></li>
+                        <li class="mb-2"><a href="#">Giao hàng</a></li>
+                        <li class="mb-2"><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="mb-3">Liên hệ</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> 1900-xxxx</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> support@techzone.vn</li>
+                        <li class="mb-2"><i class="fas fa-clock me-2"></i> 8:00 - 22:00 (Hàng ngày)</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2024 TechZone. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đăng nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="loginError" class="alert alert-danger d-none"></div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="abc@gmail.com">
+                        <div id="loginEmailError" class="text-danger small"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="loginPassword">
+                        <div id="loginPasswordError" class="text-danger small"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100" onclick="handleLogin()">Đăng nhập</button>
+                    <p class="text-center w-100 mb-0">
+                        Chưa có tài khoản? <a href="#" onclick="switchToRegister()">Đăng ký ngay</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đăng ký tài khoản</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="registerError" class="alert alert-danger d-none"></div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="registerEmail" placeholder="abc@gmail.com">
+                        <div id="registerEmailError" class="text-danger small"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="registerPassword">
+                        <div id="registerPasswordError" class="text-danger small"></div>
+                        <small class="text-muted">Ít nhất 8 ký tự, bao gồm chữ HOA, chữ thường, số và ký tự đặc biệt (@$!%*#?&)</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Xác nhận mật khẩu</label>
+                        <input type="password" class="form-control" id="registerConfirmPassword">
+                        <div id="registerConfirmError" class="text-danger small"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100" onclick="handleRegister()">Đăng ký</button>
+                    <p class="text-center w-100 mb-0">
+                        Đã có tài khoản? <a href="#" onclick="switchToLogin()">Đăng nhập</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const grid = document.getElementById('featuredProducts');
+            const featured = productsData.filter(p => p.featured).slice(0, 6);
+            
+            grid.innerHTML = featured.map(product => `
+                <div class="col-md-4 col-sm-6">
+                    <div class="card product-card shadow-sm">
+                        <img src="${product.image}" class="card-img-top product-img" alt="${product.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <div class="mb-2">
+                                <span class="price">${formatPrice(product.price)} ₫</span>
+                                ${product.oldPrice ? `<span class="old-price ms-2">${formatPrice(product.oldPrice)} ₫</span>` : ''}
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="detail.html?id=${product.id}" class="btn btn-outline-primary flex-grow-1">
+                                    <i class="fas fa-eye"></i> Chi tiết
+                                </a>
+                                <button class="btn btn-primary flex-grow-1" onclick="addToCart(${product.id})">
+                                    <i class="fas fa-cart-plus"></i> Mua
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+</html>

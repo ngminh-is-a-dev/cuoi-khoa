@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone - Liên hệ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-laptop"></i> TechZone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="input-group me-3 d-none d-md-flex" style="width: 250px;">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Tìm kiếm...">
+                        <button class="btn btn-light" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <a href="cart.html" class="btn btn-light position-relative me-2">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartBadge" class="badge bg-danger badge-cart">0</span>
+                    </a>
+                    <div id="userSection"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Liên hệ</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Liên hệ với chúng tôi</h2>
+        <p class="text-center text-muted mb-5">Chúng tôi luôn sẵn sàng hỗ trợ bạn. Hãy để lại thông tin và câu hỏi của bạn.</p>
+
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="contact-info-box text-center">
+                    <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                    <h5>Địa chỉ</h5>
+                    <p>123 Đường ABC, Quận 1<br>TP. Hồ Chí Minh, Việt Nam</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="contact-info-box text-center">
+                    <i class="fas fa-phone fa-3x text-primary mb-3"></i>
+                    <h5>Điện thoại</h5>
+                    <p>Hotline: <strong>1900-xxxx</strong><br>Di động: 0901-234-567</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="contact-info-box text-center">
+                    <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                    <h5>Email</h5>
+                    <p>support@techzone.vn<br>sales@techzone.vn</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="text-center mb-4">Câu hỏi thường gặp</h3>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Chính sách bảo hành như thế nào?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Tất cả sản phẩm tại TechZone đều được bảo hành chính hãng 12-24 tháng tùy theo từng sản phẩm. Bảo hành 1 đổi 1 trong 30 ngày đầu nếu có lỗi từ nhà sản xuất.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Thời gian giao hàng bao lâu?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Đơn hàng trong nội thành TP.HCM: 2-4 giờ. Đơn hàng tỉnh thành khác: 2-3 ngày làm việc. Miễn phí vận chuyển cho đơn hàng từ 5 triệu trở lên.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Có hỗ trợ trả góp không?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Có. TechZone hỗ trợ trả góp 0% lãi suất qua các công ty tài chính uy tín. Thủ tục đơn giản, duyệt nhanh chỉ trong 15 phút.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3"><i class="fas fa-laptop"></i> TechZone</h5>
+                    <p>Cửa hàng công nghệ hàng đầu Việt Nam. Cung cấp các sản phẩm chính hãng với giá tốt nhất.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="mb-3">Về chúng tôi</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Giới thiệu</a></li>
+                        <li class="mb-2"><a href="#">Tuyển dụng</a></li>
+                        <li class="mb-2"><a href="#">Tin tức</a></li>
+                        <li class="mb-2"><a href="#">Chính sách</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="mb-3">Hỗ trợ</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Hướng dẫn</a></li>
+                        <li class="mb-2"><a href="#">Bảo hành</a></li>
+                        <li class="mb-2"><a href="#">Giao hàng</a></li>
+                        <li class="mb-2"><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="mb-3">Liên hệ</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> 1900-xxxx</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> support@techzone.vn</li>
+                        <li class="mb-2"><i class="fas fa-clock me-2"></i> 8:00 - 22:00 (Hàng ngày)</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2024 TechZone. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đăng nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="loginError" class="alert alert-danger d-none"></div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="abc@gmail.com">
+                        <div id="loginEmailError" class="text-danger small"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="loginPassword">
+                        <div id="loginPasswordError" class="text-danger small"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100" onclick="handleLogin()">Đăng nhập</button>
+                    <p class="text-center w-100 mb-0">
+                        Chưa có tài khoản? <a href="#" onclick="switchToRegister()">Đăng ký ngay</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đăng ký tài khoản</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="registerError" class="alert alert-danger d-none"></div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="registerEmail" placeholder="abc@gmail.com">
+                        <div id="registerEmailError" class="text-danger small"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="registerPassword">
+                        <div id="registerPasswordError" class="text-danger small"></div>
+                        <small class="text-muted">Ít nhất 8 ký tự, bao gồm chữ HOA, chữ thường, số và ký tự đặc biệt (@$!%*#?&)</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Xác nhận mật khẩu</label>
+                        <input type="password" class="form-control" id="registerConfirmPassword">
+                        <div id="registerConfirmError" class="text-danger small"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100" onclick="handleRegister()">Đăng ký</button>
+                    <p class="text-center w-100 mb-0">
+                        Đã có tài khoản? <a href="#" onclick="switchToLogin()">Đăng nhập</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
